@@ -196,5 +196,5 @@ FakesAssemblies/
 *.opt
 
 # TypeScript generated files
-/Noodle/Noodle.Web/App/**/*.js
-/Noodle/Noodle.Web/App/**/*.map
+/Noodle.Web/App/**/*.js
+/Noodle.Web/App/**/*.map
