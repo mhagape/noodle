@@ -1,0 +1,24 @@
+﻿    <md-dialog  class="md-3-line">
+        <form>
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>Software Security</h2>
+                    <span flex></span>
+                    <md-button class="md-icon-button" ng-click="cancel()">
+                        <md-icon md-svg-src="navigation:close" aria-label="Close dialog"></md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-dialog-content>
+                <h2 class="md-title">Your review</h2>
+                <star-rating></star-rating>
+                <md-input-container flex>
+                    <label style="font-size: 20px">Write your review</label>
+                    <textarea ng-model="vm.review" style="width: 500px; height: 100px;" columns="1" rows="10"></textarea>
+                </md-input-container>
+            </md-dialog-content>
+            <div class="md-actions" layout="row">
+                <md-button class="md-raised md-primary">Submit</md-button>
+            </div>
+        </form>
+    </md-dialog>

@@ -194,3 +194,7 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+
+# TypeScript generated files
+/Noodle/Noodle.Web/App/**/*.js
+/Noodle/Noodle.Web/App/**/*.map

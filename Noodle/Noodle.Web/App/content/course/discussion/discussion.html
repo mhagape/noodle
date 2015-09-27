@@ -1,0 +1,53 @@
+﻿<md-content class="md-padding">
+    <md-whiteframe class="md-whiteframe-z3" layout layout-align="start center">
+        <md-list>
+            <md-list-item class="md-2-line">
+                <div class="md-list-item-text" layout="column" layout-align="center start">
+                    <md-button ui-sref="content.course.info">Back</md-button>
+                </div>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item class="md-3-line">
+                <img ng-src="http://lorempixel.com/200/200/people/1/" width="40" height="40" class="md-avatar" />
+                <div class="md-list-item-text" layout="column">
+                    <h4><a ui-sref="content.course.info.discussion">Lorem ipsum dolor sit amet, consectetur adipiscin</a></h4>
+                    <h6>Robert Sedgewick</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ligula leo. Proin id tempor metus, non suscipit enim. Nullam vel tempor risus. Donec ultrices consequat massa ac commodo. Nullam eu diam eget ex suscipit mattis</p>
+                </div>
+            </md-list-item>
+        </md-list>
+    </md-whiteframe>
+
+
+    <md-whiteframe class="md-whiteframe-z1" layout layout-align="start center">
+        <md-list>
+            <md-divider></md-divider>
+            <md-list-item class="md-3-line">
+                <img ng-src="http://lorempixel.com/200/200/people/1/" width="40" height="40" class="md-avatar" />
+                <div class="md-list-item-text" layout="column">
+                    <h6>Robert Sedgewick</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ligula leo. Proin id tempor metus, non suscipit enim. Nullam vel tempor risus. Donec ultrices consequat massa ac commodo. Nullam eu diam eget ex suscipit mattis</p>
+                </div>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item class="md-3-line">
+                <img ng-src="http://lorempixel.com/200/200/people/1/" width="40" height="40" class="md-avatar" />
+                <div class="md-list-item-text" layout="column">
+                    <h6> Kevin Wayne </h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et ligula leo. Proin id tempor metus, non suscipit enim. Nullam vel tempor risus. </p>
+                </div>
+            </md-list-item>
+        </md-list>
+    </md-whiteframe>
+
+    <div layout="column" layout-wrap>
+        <div flex>
+            <md-input-container>
+                <label style="font-size: 20px">Reply</label>
+                <textarea ng-model="vm.body" style="height: 100px;" columns="1" rows="10"></textarea>
+            </md-input-container>
+        </div>
+        <md-button flex class="md-raised md-primary">Reply</md-button>
+    </div>
+
+</md-content>

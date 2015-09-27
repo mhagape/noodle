@@ -1,0 +1,44 @@
+﻿
+<md-content>
+    <md-list>
+        <md-list-item class="md-3-line" style="margin-bottom: 10px" ng-repeat="course in vm.courses">
+            <md-card flex="99">
+                <md-card-content>
+                    <md-menu md-position-mode="target-right target" class="right">
+                        <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)">
+                            <md-icon md-menu-origin  md-svg-icon="navigation:more_vert"></md-icon>
+                        </md-button>
+                        <md-menu-content width="2">
+                            <md-menu-item>
+                                <md-button ui-sref="content.course.info">
+                                    <p flex>Course info</p>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button>
+                                    <p flex>Leave course</p>
+                                </md-button>
+                            </md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+                    <div layout="row" layout-align="start center">
+
+                        <div>
+                            <img ng-src="http://lorempixel.com/100/100/technics/" style="padding: 10px" class="face">
+                        </div>
+                        <div class="md-list-item-text">
+                            <h3>{{course.title}}</h3>
+                            <h4>{{course.professor}}</h4>
+                            <p>{{course.description}}</p>
+                            <star-rating></star-rating>
+                        </div>
+                    </div>
+
+                </md-card-content>
+                <div class="md-actions" layout="row" layout-align="end center">
+                    <md-button class="md-raised md-primary">Enroll</md-button>
+                </div>
+            </md-card>
+        </md-list-item>
+    </md-list>
+</md-content>

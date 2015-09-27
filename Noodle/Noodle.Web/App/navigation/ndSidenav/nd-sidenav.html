@@ -1,0 +1,41 @@
+﻿<md-sidenav style="height: 100%;" class="md-sidenav-left md-whiteframe-z2" md-component-id="ndSidenav" md-is-locked-open="$mdMedia('gt-md')">
+    <md-content layout-padding class="side-nav-cover" style="height: 210px">
+
+        <md-menu md-position-mode="target-right target" class="right">
+            <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+                <md-icon md-menu-origin style="width: 40px; height: 40px" md-svg-icon="action:account_circle"></md-icon>
+            </md-button>
+            <md-menu-content width="2">
+                <md-menu-item>
+                    <md-button>
+                        <div ui-sref="login" layout="row">
+                            <p flex>Sign out</p>
+                            <md-icon md-menu-align-target md-svg-icon="action:account_balance_wallet" style="margin: auto 3px auto 0;"></md-icon>
+                        </div>
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+
+        <div style="padding-top:90px">
+            <img src="http://lorempixel.com/200/200/people/1/" alt="" style="width: 65px" class="circle">
+            <span class="title">Name here</span>
+        </div>
+    </md-content>
+
+    <md-content class="side-nav-menu" ng-init="selected=1">
+        <md-list>
+
+            <md-list-item ng-click="selected=1" ng-class="{'active' : selected==1}">
+                <div layout-fill class="waves-effect waves-ligh" ui-sref="content.dashboard">Dashboard</div>
+            </md-list-item>
+
+            <md-list-item ng-click="selected=2" ng-class="{'active' : selected==2}">
+                <div layout-fill ui-sref="content.courses">Courses</div>
+            </md-list-item>
+
+            <md-divider></md-divider>
+        </md-list>
+
+    </md-content>
+</md-sidenav>
