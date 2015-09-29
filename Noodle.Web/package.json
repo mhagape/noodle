@@ -17,5 +17,13 @@
   },
   "scripts": {
     "test": "karma start karma.conf.js"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-debug": "^2.1.0",
+    "gulp-install": "^0.5.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-typescript": "^2.9.0",
+    "yargs": "^3.26.0"
   }
 }
