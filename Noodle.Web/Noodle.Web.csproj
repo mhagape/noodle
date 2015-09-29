@@ -81,6 +81,7 @@
     <Content Include="Content\materialize\css\materialize.min.css" />
     <Content Include="Content\materialize\font\material-design-icons\LICENSE.txt" />
     <Content Include="Content\materialize\font\material-design-icons\Material-Design-Icons.svg" />
+    <Content Include="gulpfile.js" />
     <Content Include="scripts\hammer.js" />
     <Content Include="scripts\hammer.min.js" />
     <Content Include="scripts\lib\angular-material.js" />
@@ -133,6 +134,7 @@
     <None Include="Content\materialize\font\roboto\Roboto-Thin.ttf" />
     <None Include="Content\materialize\font\roboto\Roboto-Thin.woff" />
     <None Include="Content\materialize\font\roboto\Roboto-Thin.woff2" />
+    <Content Include="gulp.config.js" />
     <None Include="package.json" />
     <None Include="packages.config" />
     <None Include="scripts\angular-animate.min.js.map" />
@@ -243,6 +245,9 @@
     <TypeScriptCompile Include="scripts\typings\sinon\sinon.d.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>gulp compile-typescript</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
