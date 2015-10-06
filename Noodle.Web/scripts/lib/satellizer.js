@@ -369,9 +369,10 @@
           var deferred = $q.defer();
 
           provider.open(config.providers[name], userData || {})
-            .then(function(response) {
-              shared.setToken(response, false);
-              deferred.resolve(response);
+            .then(function (response) {
+                /*Changed from 'shared.setToken(response, false);'*/
+              shared.setToken(response.data, false);
+              deferred.resolve(response.data);
             })
             .catch(function(error) {
               deferred.reject(error);

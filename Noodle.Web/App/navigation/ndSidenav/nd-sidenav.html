@@ -8,7 +8,7 @@
             <md-menu-content width="2">
                 <md-menu-item>
                     <md-button>
-                        <div ui-sref="login" layout="row">
+                        <div ng-click="vm.logout()" layout="row">
                             <p flex>Sign out</p>
                             <md-icon md-menu-align-target md-svg-icon="action:account_balance_wallet" style="margin: auto 3px auto 0;"></md-icon>
                         </div>
@@ -18,8 +18,8 @@
         </md-menu>
 
         <div style="padding-top:90px">
-            <img src="http://lorempixel.com/200/200/people/1/" alt="" style="width: 65px" class="circle">
-            <span class="title">Name here</span>
+            <img ng-src="{{vm.$$ndUserService.$$loggedUser.avatar}}" alt="" style="width: 65px" class="circle">
+            <span class="title">{{vm.$$ndUserService.$$loggedUser.email}}</span>
         </div>
     </md-content>
 

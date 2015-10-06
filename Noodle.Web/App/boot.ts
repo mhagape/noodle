@@ -2,6 +2,7 @@
     baseUrl: 'App',
     paths: {
         "angular": "../Scripts/angular",
+        "angular-cookies": "../Scripts/angular-cookies",
         "angular-ui-router": "../Scripts/angular-ui-router",
         "materialize": "../Scripts/materialize/materialize",
         "angular-animate": "../Scripts/angular-animate",
@@ -17,6 +18,9 @@
     shim: {
         "angular": {
             exports: "angular",
+        },
+        "angular-cookies": {
+            deps: ["angular"]
         },
         "angular-ui-router": {
             deps: ["angular"]
@@ -45,6 +49,7 @@
         "app": {
             deps: [
                 "angular",
+                "angular-cookies",
                 "angular-materialize",
                 "angular-ui-router",
                 "satellizer",

@@ -1,7 +1,8 @@
 ﻿class DashboardVm {
 
-    public static $inject = ["ndToolbarService"];
-    constructor(ndToolbarService:nd.services.INdToolbarService) {
+    public static $inject = ["$auth","ndToolbarService"];
+    constructor($auth,
+        ndToolbarService: nd.services.INdToolbarService) {
         ndToolbarService.setTitle("Dashboard");
     }
 }
