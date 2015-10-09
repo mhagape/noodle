@@ -2,7 +2,7 @@
 
     public static $inject = ["$auth","ndToolbarService"];
     constructor($auth,
-        ndToolbarService: nd.services.INdToolbarService) {
+        ndToolbarService: nd.services.INdToolbarSrv) {
         ndToolbarService.setTitle("Dashboard");
     }
 }

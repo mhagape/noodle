@@ -7,9 +7,11 @@ import directivesModuleDef = require("directives/~module-definitions");
 import servicesModuleDef = require("services/~module-definitions");
 import constantsModuleDef = require("constants/~module-definitions");
 import runModuleDef = require("run/~module-definitions");
+import filtersModuleDef = require("filters/~module-definitions");
+import interceptorsModuleDef = require("interceptors/~module-definitions");
 
 export function init() {
-    var appModule = angular.module("pssc", [
+    const appModule = angular.module("pssc", [
         "ui.router",
         "ui.materialize",
         "ngCookies",
@@ -25,6 +27,8 @@ export function init() {
     servicesModuleDef.init(appModule);
     constantsModuleDef.init(appModule);
     runModuleDef.init(appModule);
+    filtersModuleDef.init(appModule);
+    interceptorsModuleDef.init(appModule);
 
     angular.bootstrap(document, ["pssc"]);
 } 

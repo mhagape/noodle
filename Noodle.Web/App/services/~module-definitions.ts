@@ -1,7 +1,9 @@
-﻿import ndAuthService = require("services/nd-auth-service");
-import ndUserService = require("services/nd-user-service");
+﻿import ndAuthSrv = require("services/nd-auth-srv");
+import ndUserSrv = require("services/nd-user-srv");
+import ndCoursesSrv = require("services/nd-courses-srv");
 
 export function init(app: ng.IModule) {
-    ndAuthService.register(app);
-    ndUserService.register(app);
+    ndAuthSrv.register(app);
+    ndUserSrv.register(app);
+    ndCoursesSrv.register(app);
 }

@@ -1,11 +1,11 @@
-﻿class NdAuthService implements nd.services.INdAuthService {
+﻿class NdAuthService implements nd.services.INdAuthSrv {
 
     private $$auth;
     private $$http: ng.IHttpService;
     private $$state: ng.ui.IStateService;
     private $$cookies: ng.cookies.ICookiesService;
     private $$mdToast: md.IToastService;
-    private $$ndUserService: nd.services.INdUserService;
+    private $$ndUserService: nd.services.INdUserSrv;
     private $$ndCookieKeys: nd.constants.INdCookieKeys;
 
     public static $inject = ["$auth", "$http", "$state", "$cookies", "$mdToast", "ndUserService", "ndCookieKeys"];
@@ -15,7 +15,7 @@
         $state: ng.ui.IStateService,
         $cookies: ng.cookies.ICookiesService,
         $mdToast: md.IToastService,
-        ndUserService: nd.services.INdUserService,
+        ndUserService: nd.services.INdUserSrv,
         ndCookieKeys: nd.constants.INdCookieKeys) {
 
         var self = this;

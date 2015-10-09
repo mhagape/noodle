@@ -1,20 +1,24 @@
 ﻿declare module nd.services {
-    interface ISidenavService {
+    interface ISidenavSrv {
         toggle();
     }
 
-    interface INdToolbarService {
+    interface INdToolbarSrv {
         setTitle(title: string): void;
     }
 
-    interface INdAuthService {
+    interface INdAuthSrv {
         logout();
         authenticate(provider: string);
     }
 
-    interface INdUserService {
+    interface INdUserSrv {
         getUserDetailsFromGoogle(): ng.IPromise<any>;
         getUserDetailsFromFacebook(): ng.IPromise<any>;
         getLoggedUser(): ILoggedUser;
+    }
+
+    interface INdCoursesSrv {
+        getLoggedUserCourses(): ng.IPromise<Array<any>>;
     }
 }

@@ -1,5 +1,6 @@
 ﻿@media (min-width: 100px) {
-    @import "navigation/min-width-100px";
+    @import "navigation/navigation";
+    @import "directives/starRating/star-rating";
 }
 
 @media (min-width: 600px) {

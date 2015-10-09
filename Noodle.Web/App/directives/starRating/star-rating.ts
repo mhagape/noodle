@@ -1,27 +1,46 @@
 ﻿class StarRating {
-    public scope = {};
+    public scope = {
+        ratingValue: "=ngModel",
+        max: "=?", // optional (default is 5)
+        onRatingSelect: "&?",
+        readonly: "=?"
+    };
     public controller = "starRatingVm";
     public controllerAs = "vm";
     public templateUrl = "App/directives/starRating/star-rating.html";
+    public link(scope, element, attributes) {
+        if (scope.max == undefined) {
+            scope.max = 5;
+        }
+        function updateStars() {
+            scope.vm.stars = [];
+            for (var i = 0; i < scope.max; i++) {
+                scope.vm.stars.push({
+                    filled: i < scope.ratingValue
+                });
+            }
+        };
+        scope.vm.toggle = index => {
+            if (scope.readonly == undefined || scope.readonly === false) {
+                scope.ratingValue = index + 1;
+                scope.onRatingSelect({
+                    rating: index + 1
+                });
+            }
+        };
+        scope.$watch("ratingValue", (oldValue, newValue) => {
+            if (!angular.isUndefined(newValue)) {
+                updateStars();
+            }
+        });
+    }
 }
 class StarRatingVm {
 
-    private $mdDialog;
-    public static $inject = ["$mdDialog"];
-    constructor($mdDialog) {
-        var self = this;
-        self.$mdDialog = $mdDialog;
+    public static $inject = [];
+    constructor() {
     }
-    public showRatingDialog(ev) {
-        var self = this;
-        self.$mdDialog.show({
-            controller: "starRatingDialogVm",
-            templateUrl: "App/dialogs/starRatingDialog/star-rating-dialog.html",
-            parent: angular.element(document.body),
-            targetEvent: ev,
-            clickOutsideToClose: true
-        });
-    }
+
 }
 
 export function register(app: ng.IModule) {

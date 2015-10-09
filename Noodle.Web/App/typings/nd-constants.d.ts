@@ -7,4 +7,9 @@
     interface INdCookieKeys {
         LOGGED_USER_DETAILS: string;
     }
+
+    interface INdApiResources {
+        COURSES: string;
+        MY_COURSES: string;
+    }
 } 

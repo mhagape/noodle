@@ -7,15 +7,15 @@
 
 class NdSidenavVm {
 
-    private $$ndUserService: nd.services.INdUserService;
-    private $$ndAuthService: nd.services.INdAuthService;
+    private $$ndUserService: nd.services.INdUserSrv;
+    private $$ndAuthService: nd.services.INdAuthSrv;
     private $$state: ng.ui.IStateService;
 
     public static $inject = ["$state", "ndUserService", "ndAuthService"];
     constructor(
         $state: ng.ui.IStateService,
-        ndUserService: nd.services.INdUserService,
-        ndAuthService: nd.services.INdAuthService) {
+        ndUserService: nd.services.INdUserSrv,
+        ndAuthService: nd.services.INdAuthSrv) {
 
         var self = this;
         self.$$ndUserService = ndUserService;

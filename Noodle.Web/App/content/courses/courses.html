@@ -6,7 +6,7 @@
                 <md-card-content>
                     <md-menu md-position-mode="target-right target" class="right">
                         <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)">
-                            <md-icon md-menu-origin  md-svg-icon="navigation:more_vert"></md-icon>
+                            <md-icon md-menu-origin md-svg-icon="navigation:more_vert"></md-icon>
                         </md-button>
                         <md-menu-content width="2">
                             <md-menu-item>
@@ -30,7 +30,7 @@
                             <h3>{{course.title}}</h3>
                             <h4>{{course.professor}}</h4>
                             <p>{{course.description}}</p>
-                            <star-rating></star-rating>
+                            <star-rating ng-model="course.rating" ng-click="vm.showRatingDialog($event,course)" readonly="true"></star-rating>
                         </div>
                     </div>
 

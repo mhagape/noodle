@@ -1,20 +1,11 @@
-﻿<div layout="row" layout-align="center center" ng-click="vm.showRatingDialog($event)">
+﻿<div layout="row" layout-align="center center">
     <md-tooltip>
         Rate this course
     </md-tooltip>
-    <div>
-        <md-icon md-svg-icon="toggle:star_outline"></md-icon>
-    </div>
-    <div>
-        <md-icon md-svg-icon="toggle:star_outline"></md-icon>
-    </div>
-    <div>
-        <md-icon md-svg-icon="toggle:star_outline"></md-icon>
-    </div>
-    <div>
-        <md-icon md-svg-icon="toggle:star_outline"></md-icon>
-    </div>
-    <div>
-        <md-icon md-svg-icon="toggle:star_outline"></md-icon>
+
+    <div class="star-rating" ng-class="{readonly: vm.readonly}">
+        <div ng-repeat="star in vm.stars" class="star" ng-class="{filled: star.filled}" ng-click="vm.toggle($index)">
+            <md-icon md-svg-icon="toggle:star_outline"></md-icon>
+        </div>
     </div>
 </div>

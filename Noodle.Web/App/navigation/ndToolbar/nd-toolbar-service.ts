@@ -1,4 +1,4 @@
-﻿class NdToolbarService implements nd.services.INdToolbarService {
+﻿class NdToolbarService implements nd.services.INdToolbarSrv {
     private $$title: string;
 
     public setTitle(title: string): void {

@@ -1,4 +1,4 @@
-﻿class NdSidenavService implements nd.services.ISidenavService {
+﻿class NdSidenavService implements nd.services.ISidenavSrv {
     private $mdUtil;
     private $mdSidenav;
 

@@ -2,7 +2,7 @@
         <form>
             <md-toolbar>
                 <div class="md-toolbar-tools">
-                    <h2>Software Security</h2>
+                    <h2>{{vm.course.title}}</h2>
                     <span flex></span>
                     <md-button class="md-icon-button" ng-click="cancel()">
                         <md-icon md-svg-src="navigation:close" aria-label="Close dialog"></md-icon>
@@ -11,7 +11,7 @@
             </md-toolbar>
             <md-dialog-content>
                 <h2 class="md-title">Your review</h2>
-                <star-rating></star-rating>
+                <star-rating ng-model="vm.rating"></star-rating>
                 <md-input-container flex>
                     <label style="font-size: 20px">Write your review</label>
                     <textarea ng-model="vm.review" style="width: 500px; height: 100px;" columns="1" rows="10"></textarea>
