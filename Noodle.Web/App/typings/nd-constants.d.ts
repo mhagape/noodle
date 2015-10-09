@@ -11,5 +11,7 @@
     interface INdApiResources {
         COURSES: string;
         MY_COURSES: string;
+        LEAVE_COURSE_COMMAND: string;
+        ENROLL_COMMAND: string;
     }
 } 

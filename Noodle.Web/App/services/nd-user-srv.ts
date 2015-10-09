@@ -47,7 +47,7 @@
         var self = this;
         var token = self.$$auth.getToken();
         return <any>self.$$http.get(self.$$ndEndpoints.GOOGLE_USER_INFO + token).then((response: any) => {
-            return self.$$http.get(`/me/${encodeURIComponent(response.data.email)}`).then((res: any) => {
+            return self.$$http.get("/me/" + encodeURIComponent(response.data.email)).then((res: any) => {
                 self.setLogedUser({
                     email: response.data.email,
                     avatar: response.data.picture,
@@ -63,7 +63,7 @@
         var self = this;
         var token = self.$$auth.getToken();
         return self.$$http.get(self.$$ndEndpoints.FACEBOOK_USER_INFO + token).then((response: any) => {
-            return self.$$http.get(`/me/${encodeURIComponent(response.data.email)}`).then((res: any) => {
+            return self.$$http.get("/me/" + encodeURIComponent(response.data.email)).then((res: any) => {
                 self.setLogedUser({
                     email: response.data.email,
                     avatar: "https://graph.facebook.com/" + response.data.id + "/picture?type=square",

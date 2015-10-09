@@ -79,6 +79,7 @@
     <Content Include="App\base.min.css">
       <DependentUpon>base.css</DependentUpon>
     </Content>
+    <Content Include="App\content\courses\nd-course-card.html" />
     <Content Include="App\directives\starRating\star-rating.css">
       <DependentUpon>star-rating.scss</DependentUpon>
     </Content>
@@ -237,6 +238,7 @@
     <TypeScriptCompile Include="App\constants\nd-api-resources.ts" />
     <TypeScriptCompile Include="App\constants\~module-definitions.ts" />
     <TypeScriptCompile Include="App\content\courses\courses-vm.ts" />
+    <TypeScriptCompile Include="App\content\courses\nd-course-card.ts" />
     <TypeScriptCompile Include="App\content\course\discussions\discussions-vm.ts" />
     <TypeScriptCompile Include="App\content\course\discussion\discussion-vm.ts" />
     <TypeScriptCompile Include="App\content\course\outline\outline-vm.ts" />

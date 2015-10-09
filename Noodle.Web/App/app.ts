@@ -11,7 +11,7 @@ import filtersModuleDef = require("filters/~module-definitions");
 import interceptorsModuleDef = require("interceptors/~module-definitions");
 
 export function init() {
-    const appModule = angular.module("pssc", [
+    var appModule = angular.module("pssc", [
         "ui.router",
         "ui.materialize",
         "ngCookies",

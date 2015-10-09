@@ -1,0 +1,37 @@
+﻿<md-card>
+    <md-card-content>
+        <md-menu md-position-mode="target-right target" class="right">
+            <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)">
+                <md-icon md-menu-origin md-svg-icon="navigation:more_vert"></md-icon>
+            </md-button>
+            <md-menu-content width="2">
+                <md-menu-item>
+                    <md-button ui-sref="content.course.info">
+                        <p flex>Course info</p>
+                    </md-button>
+                </md-menu-item>
+                <md-menu-item ng-show="vm.canUserLeaveCourse">
+                    <md-button>
+                        <p flex>Leave course</p>
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+        <div layout="row" layout-align="start center">
+
+            <div>
+                <img ng-src="{{vm.course.avatar}}" style="padding: 10px" class="face">
+            </div>
+            <div class="md-list-item-text">
+                <h3>{{vm.course.title}}</h3>
+                <h4>{{vm.course.professor}}</h4>
+                <p>{{vm.course.description}}</p>
+                <star-rating ng-model="vm.course.rating" ng-click="vm.showRatingDialog($event)" readonly="true"></star-rating>
+            </div>
+        </div>
+
+    </md-card-content>
+    <div ng-show="vm.canUserEnroll" class="md-actions" layout="row" layout-align="end center">
+        <md-button class="md-raised md-primary">Enroll</md-button>
+    </div>
+</md-card>

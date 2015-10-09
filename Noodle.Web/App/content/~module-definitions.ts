@@ -1,5 +1,6 @@
 ﻿import routeDef = require("content/route-def");
 import coursesVm = require("content/courses/courses-vm");
+import ndCourseCard = require("content/courses/nd-course-card");
 import courseVm = require("content/course/course-vm");
 import discussionsVm = require("content/course/discussions/discussions-vm");
 import discussionVm = require("content/course/discussion/discussion-vm");
@@ -16,4 +17,5 @@ export function init(app: ng.IModule) {
     discussionVm.register(app);
     myCourseSection.register(app);
     dashboardVm.register(app);
+    ndCourseCard.register(app);
 }

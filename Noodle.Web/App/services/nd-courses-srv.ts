@@ -33,6 +33,15 @@
         });
     }
 
+    public getCourses(): ng.IPromise<Array<any>> {
+        var self = this;
+        var user = self.$$ndUserService.getLoggedUser();
+        var link = self.getLink(user, self.$$ndApiResources.COURSES);
+        return self.$$http.get(link).then((res: any) => {
+            return res.data;
+        }); 
+    }
+
 }
 
 export function register(app: ng.IModule) {

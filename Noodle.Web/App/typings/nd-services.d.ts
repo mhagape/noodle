@@ -20,5 +20,6 @@
 
     interface INdCoursesSrv {
         getLoggedUserCourses(): ng.IPromise<Array<any>>;
+        getCourses(): ng.IPromise<Array<any>>;
     }
 }

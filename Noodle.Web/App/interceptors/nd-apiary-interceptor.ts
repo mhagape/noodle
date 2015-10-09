@@ -7,7 +7,7 @@
         return {
             request(config) {
                 if (config.url[0] === "/" && config.url !== "/auth/google" && config.url !== "/auth/facebook") {
-                    config.url = `http://private-ab898-noodle2.apiary-mock.com${config.url}`;
+                    config.url = "http://private-ab898-noodle2.apiary-mock.com" + config.url ;
                 }
                 return config;
             }
